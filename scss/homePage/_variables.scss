@@ -62,7 +62,16 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
     transform: scaleX(1);
   }
 }
+//Hover
+@mixin hover($color,$background) {
+  &:hover {
+    background: $background;
+    color: $color;
+  }
+}
 
+
+//Animação dropDown
 @mixin animationDropdown($height) {
   @keyframes animationDrop {
     0%{height: 0rem;} 100%{height: $height;} 
