@@ -18,12 +18,11 @@
     .menuNav {
         display: none;
     }
-
-    .btnMenu {
-    all: unset;
-    cursor: pointer;
-    font-size: 1.625rem;
-    color: $primary-color;
+    .btnMenuClose {
+        display: none;
+    }
+    .btnMenuOpen {
+        display: none;
     }
 }
 
@@ -128,23 +127,64 @@
         .dropdown.dropOpen {
             display: block;
         }
-        .btnMenu {
-            display: none;
-        }
     }   
 }
 
 @include responsive-tablet {
-    .navbar {  
-        .dividerNav img {
-            display: none;
-        }
-        .dropdown {
-            display: none;
-        }
-        .menuNav {
-            display: none;
+        .navbar {  
+            .dividerNav img {
+                display: none;
+            }
+            .dropdown {
+                display: none;
+            }
+            .btnMenuOpen{
+                display: block;
+                all: unset;
+                cursor: pointer;
+                font-size: 1.75rem;
+                color: $primary-color;
+            }
+            .btnMenuClose{
+                display: block;
+                all: unset;
+                cursor: pointer;
+                font-size: 1.75rem;
+                color: $primary-color;
+            }
+
+            .menuNav{
+                transform: translateX(1000px);
+                transition: 0.5s ease-in-out;
+            }
+
+            .menuNav.active{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: wheat;
+                transform: translateX(0);
+                position: absolute;
+                display: block;
+
+                a{
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+
+                .styles {
+                    color: $primary-color;
+                    cursor: pointer;
+
+                    i {
+                        position: absolute;
+                        font-size: 1rem;
+                        top: .1rem;
+                        right: -1.3rem;
+                        transition: 0.3s;
+                    }
+            }
         }
     }
-    
 }

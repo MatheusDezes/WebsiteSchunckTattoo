@@ -17,3 +17,14 @@ styles.addEventListener('click', () => {
     iconDrop.classList.toggle('arrowRotate');
 });
 
+const buttonMenuOpen = document.querySelector('.btnMenuOpen');
+const menuNav = document.querySelector('.menuNav');
+const buttonMenuClose = document.querySelector('.btnMenuClose');
+
+buttonMenuOpen.addEventListener('click', () => {
+    menuNav.classList.add('active');
+});
+buttonMenuClose.addEventListener('click', () => {
+    menuNav.classList.remove('active');
+});
+

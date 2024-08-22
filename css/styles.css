@@ -20,11 +20,11 @@
 .navbar .menuNav {
   display: none;
 }
-.navbar .btnMenu {
-  all: unset;
-  cursor: pointer;
-  font-size: 1.625rem;
-  color: #E4C9A0;
+.navbar .btnMenuClose {
+  display: none;
+}
+.navbar .btnMenuOpen {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -140,9 +140,6 @@
   .navbar .dropdown.dropOpen {
     display: block;
   }
-  .navbar .btnMenu {
-    display: none;
-  }
 }
 @media screen and (max-width: 992px) {
   .navbar .dividerNav img {
@@ -151,8 +148,48 @@
   .navbar .dropdown {
     display: none;
   }
+  .navbar .btnMenuOpen {
+    display: block;
+    all: unset;
+    cursor: pointer;
+    font-size: 1.75rem;
+    color: #E4C9A0;
+  }
+  .navbar .btnMenuClose {
+    display: block;
+    all: unset;
+    cursor: pointer;
+    font-size: 1.75rem;
+    color: #E4C9A0;
+  }
   .navbar .menuNav {
-    display: none;
+    transform: translateX(1000px);
+    transition: 0.5s ease-in-out;
+  }
+  .navbar .menuNav.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: wheat;
+    transform: translateX(0);
+    position: absolute;
+    display: block;
+  }
+  .navbar .menuNav.active a {
+    color: #E4C9A0;
+    text-decoration: none;
+  }
+  .navbar .menuNav.active .styles {
+    color: #E4C9A0;
+    cursor: pointer;
+  }
+  .navbar .menuNav.active .styles i {
+    position: absolute;
+    font-size: 1rem;
+    top: 0.1rem;
+    right: -1.3rem;
+    transition: 0.3s;
   }
 }
 * {
