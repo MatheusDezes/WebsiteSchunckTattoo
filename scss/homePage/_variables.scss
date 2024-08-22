@@ -3,6 +3,7 @@ $primary-color: #E4C9A0;
 $primary-colorHover: #c09452;
 $bg-color: #070102;
 $bg-colorHover: #0e0204;
+$gradientDropdown: linear-gradient(90deg, #E4C9A0 0%, #B7A994 100%);
 $primary-gradient: linear-gradient(#F1C37C, #A78045);
 $secondary-gradient: linear-gradient(to right, #F1C37C, #A78045);
 $gradientHover: linear-gradient(to right, #ffc875, #c98929);
@@ -15,10 +16,10 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
 }
 
 //Flexbox Colum
-@mixin flexColum(){
+@mixin flexColum($align-items){
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: $align-items;
     flex-direction: column;
 }
 //Media Query Desktop

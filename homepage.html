@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale="1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      ,
+      maximum-scale="1.0"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <!--========Google Fonts=========-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/Logo/logoShunck.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=IM+Fell+French+Canon:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/Logo/logoShunck.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
+      rel="stylesheet"
+    />
     <!--========Title=========-->
     <title>SchunkTatto</title>
-</head>
-<body>
-<main>
-    <!--navBar-->
-<nav class="navbarContainer">
-    <div class="navbar">
-        <div class="navbarContainer"></div>
-         <div class="logoNav"><img src="assets/Logo/logoShunck.svg" alt="LogoSchunkTattoo"></div>
-         <div class="dividerNav"><img src="assets/Dividers/shapeNav.svg" alt="divisorNav"></div>
-         <button class="btnMenuClose"><i class="fa-solid fa-xmark"></i></button>
-         <ul class="menuNav">
-            <li><a href="/">home</a></li>
-            <li><a href="/">artista</a></li>
-            <li class="styles">estilos <i class="fa-solid fa-chevron-down arrow"></i></li>
-            <li><a href="/">contatos</a></li>
-         </ul>
-         <button class="btnMenuOpen"><i class="fa-solid fa-bars"></i></button>
-         <div class="dropdown">
-            <ul class="menuDropdown">
-                <li><a href="/">Ver Todos</a></li>
-                <li><a href="/">BlackWork</a></li>
-                <li><a href="/">Realismo</a></li>
-                <li><a href="/">Old School</a></li>
-                <li><a href="/">Fine Line</a></li>
+  </head>
+  <body>
+    <main>
+      <!--navBar-->
+      <nav class="navbarContainer">
+        <div class="navbar">
+          <div class="logoNav">
+            <img src="assets/Logo/logoShunck.svg" alt="LogoSchunkTattoo" /></div>
+          <div class="dividerNav">
+            <img src="assets/Dividers/shapeNav.svg" alt="divisorNav" /></div>
+            <!--Container menu-->
+          <div class="menuContainer">
+            <div class="menuMobile">
+              <div class="dividerMobile">
+                <img src="assets/Dividers/shapeNav.svg" alt="divisorNavMobile"/></div>
+              <button class="btnMenuClose"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <!--list navbar-->
+            <ul class="menuNav">
+              <li><a href="/"><i class="fa-solid fa-house"></i> home</a></li>
+              <li><a href="/"><i class="fa-solid fa-user"></i> artista</a></li>
+              <li class="styles"><i class="fa-solid fa-paintbrush"></i> estilos <i class="fa-solid fa-chevron-down arrow"></i></li>
+              <li><a href="/"><i class="fa-solid fa-comments"></i> contatos</a></li>
             </ul>
-         </div>
-    </div>
-</nav>
-    <!--navBar-->
-</main>
+          </div>
+          <!--dropdown-->
+          <button class="btnMenuOpen"><i class="fa-solid fa-bars"></i></button>
+          <div class="dropdown">
+            <ul class="menuDropdown">
+              <li><a class="verTodos" href="/">Ver Todos</a></li>
+              <li><a href="/">BlackWork</a></li>
+              <li><a href="/">Realismo</a></li>
+              <li><a href="/">Old School</a></li>
+              <li><a href="/">Fine Line</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--navBar-->
+    </main>
 
-
-
-<!--========Font Awesome=========-->
-<script src="https://kit.fontawesome.com/997e4ac2e2.js" crossorigin="anonymous"></script>
-<script type="module" src="js/main/dropdown.js"></script>
-</body>
+    <!--========Font Awesome=========-->
+    <script
+      src="https://kit.fontawesome.com/997e4ac2e2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/main/dropdown.js"></script>
+  </body>
 </html>

@@ -18,7 +18,7 @@ styles.addEventListener('click', () => {
 });
 
 const buttonMenuOpen = document.querySelector('.btnMenuOpen');
-const menuNav = document.querySelector('.menuNav');
+const menuNav = document.querySelector('.menuContainer');
 const buttonMenuClose = document.querySelector('.btnMenuClose');
 
 buttonMenuOpen.addEventListener('click', () => {

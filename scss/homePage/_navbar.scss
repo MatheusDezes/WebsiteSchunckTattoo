@@ -2,6 +2,12 @@
     width: 100%;        
     position: fixed;
     padding: 0 6% 0 3%;
+    transition: background 0.5s ease, border-bottom 0.5s ease;    
+        
+    &.background{
+        border-bottom: 1px solid $primary-color;
+        background: $bg-color;
+    }
 }
     
 .navbar {
@@ -15,7 +21,10 @@
     .dropdown {
         display: none;
     }
-    .menuNav {
+    .menuNav i {
+        display: none;
+    }
+    .dividerMobile {
         display: none;
     }
     .btnMenuClose {
@@ -32,12 +41,7 @@
         top: 0;             
         left: 0;    
         width: 100%;    
-        transition: background 0.5s ease, border-bottom 0.5s ease;    
-        
-        &.background{
-            border-bottom: 1px solid $primary-color;
-            background: $bg-color;
-        }
+
     }
     
     .navbar {
@@ -83,7 +87,8 @@
                 color: $primary-color;
                 cursor: pointer;
 
-                i {
+                .arrow {
+                    display: block;
                     position: absolute;
                     font-size: 1rem;
                     top: .1rem;
@@ -118,7 +123,17 @@
                     
                     &:hover {
                         color: $bg-color;
-                        background: $secondary-gradient;
+                        background: $gradientDropdown;
+                    }
+                }
+
+                .verTodos {
+                    background: $gradientDropdown;
+                    color: $bg-color;
+
+                    &:hover {
+                        background: $gradientHover;
+                        color: $bg-color;
                     }
                 }
 
@@ -131,60 +146,84 @@
 }
 
 @include responsive-tablet {
-        .navbar {  
-            .dividerNav img {
-                display: none;
-            }
-            .dropdown {
-                display: none;
-            }
-            .btnMenuOpen{
-                display: block;
-                all: unset;
-                cursor: pointer;
-                font-size: 1.75rem;
-                color: $primary-color;
-            }
-            .btnMenuClose{
-                display: block;
-                all: unset;
-                cursor: pointer;
-                font-size: 1.75rem;
-                color: $primary-color;
-            }
+    .navbar {  
+        .dividerNav img {
+            display: none;
+        }
+        .dropdown {
+            display: none;
+        }
+        
+        .btnMenuOpen,
+        .btnMenuClose{
+            display: block;
+            all: unset;
+            cursor: pointer;
+            font-size: 1.75rem;
+            color: $primary-color;
+        }
+        
+        .menuContainer.active{
+            transform: translateX(0);
+        }
 
-            .menuNav{
-                transform: translateX(1000px);
-                transition: 0.5s ease-in-out;
-            }
-
-            .menuNav.active{
-                top: 0;
-                left: 0;
+        .menuContainer{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            background: $bg-color;
+            transform: translateX(-100%);
+            transition: 0.5s ease-in-out;
+            
+            
+            .menuMobile{
+                @include flexCenter(space-between);
                 width: 100%;
-                height: 100vh;
-                background: wheat;
-                transform: translateX(0);
-                position: absolute;
+                height: 5rem;
+                border-bottom: 1px solid $primary-color;
+                padding: 0 6%;
+                
+                .dividerMobile{
+                width: 20.5rem;
+                height: 1.625rem;
                 display: block;
-
+            }
+        }
+        .menuNav{
+            width: 100%;
+            height: 100vh;
+            
+            li {
+                width: 100%;
+                height: calc(50% / 4);
+                padding: 0 6%;
+                margin-top: 1rem;
+                background: darksalmon;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                @include flexCenter(center);
+                
                 a{
-                    color: $primary-color;
-                    text-decoration: none;
-                }
-
-                .styles {
-                    color: $primary-color;
-                    cursor: pointer;
-
-                    i {
-                        position: absolute;
-                        font-size: 1rem;
-                        top: .1rem;
-                        right: -1.3rem;
-                        transition: 0.3s;
+                        
+                         i {
+                                display: flex;
+                            }   
+                        color: $primary-color;
+                        text-decoration: none;
                     }
+                    
+                }
+                .styles {
+                        color: $primary-color;
+                        cursor: pointer;
+                        .arrow {
+                            position: relative;
+                        }
+                    }
+                }
             }
         }
     }
-}
+            

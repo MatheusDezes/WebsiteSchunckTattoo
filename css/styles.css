@@ -2,6 +2,11 @@
   width: 100%;
   position: fixed;
   padding: 0 6% 0 3%;
+  transition: background 0.5s ease, border-bottom 0.5s ease;
+}
+.navbarContainer.background {
+  border-bottom: 1px solid #E4C9A0;
+  background: #070102;
 }
 
 .navbar {
@@ -17,7 +22,10 @@
 .navbar .dropdown {
   display: none;
 }
-.navbar .menuNav {
+.navbar .menuNav i {
+  display: none;
+}
+.navbar .dividerMobile {
   display: none;
 }
 .navbar .btnMenuClose {
@@ -33,11 +41,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: background 0.5s ease, border-bottom 0.5s ease;
-  }
-  .navbarContainer.background {
-    border-bottom: 1px solid #E4C9A0;
-    background: #070102;
   }
   .navbar {
     max-width: 1480px;
@@ -94,7 +97,8 @@
     color: #E4C9A0;
     cursor: pointer;
   }
-  .navbar .menuNav .styles i {
+  .navbar .menuNav .styles .arrow {
+    display: block;
     position: absolute;
     font-size: 1rem;
     top: 0.1rem;
@@ -135,7 +139,15 @@
   }
   .navbar .dropdown .menuDropdown a:hover {
     color: #070102;
-    background: linear-gradient(to right, #F1C37C, #A78045);
+    background: linear-gradient(90deg, #E4C9A0 0%, #B7A994 100%);
+  }
+  .navbar .dropdown .menuDropdown .verTodos {
+    background: linear-gradient(90deg, #E4C9A0 0%, #B7A994 100%);
+    color: #070102;
+  }
+  .navbar .dropdown .menuDropdown .verTodos:hover {
+    background: linear-gradient(to right, #ffc875, #c98929);
+    color: #070102;
   }
   .navbar .dropdown.dropOpen {
     display: block;
@@ -148,13 +160,7 @@
   .navbar .dropdown {
     display: none;
   }
-  .navbar .btnMenuOpen {
-    display: block;
-    all: unset;
-    cursor: pointer;
-    font-size: 1.75rem;
-    color: #E4C9A0;
-  }
+  .navbar .btnMenuOpen,
   .navbar .btnMenuClose {
     display: block;
     all: unset;
@@ -162,34 +168,62 @@
     font-size: 1.75rem;
     color: #E4C9A0;
   }
-  .navbar .menuNav {
-    transform: translateX(1000px);
-    transition: 0.5s ease-in-out;
+  .navbar .menuContainer.active {
+    transform: translateX(0);
   }
-  .navbar .menuNav.active {
+  .navbar .menuContainer {
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: wheat;
-    transform: translateX(0);
     position: absolute;
+    background: #070102;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+  }
+  .navbar .menuContainer .menuMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border-bottom: 1px solid #E4C9A0;
+    padding: 0 6%;
+  }
+  .navbar .menuContainer .menuMobile .dividerMobile {
+    width: 20.5rem;
+    height: 1.625rem;
     display: block;
   }
-  .navbar .menuNav.active a {
+  .navbar .menuContainer .menuNav {
+    width: 100%;
+    height: 100vh;
+  }
+  .navbar .menuContainer .menuNav li {
+    width: 100%;
+    height: 12.5%;
+    padding: 0 6%;
+    margin-top: 1rem;
+    background: darksalmon;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .menuContainer .menuNav li a {
     color: #E4C9A0;
     text-decoration: none;
   }
-  .navbar .menuNav.active .styles {
+  .navbar .menuContainer .menuNav li a i {
+    display: flex;
+  }
+  .navbar .menuContainer .menuNav .styles {
     color: #E4C9A0;
     cursor: pointer;
   }
-  .navbar .menuNav.active .styles i {
-    position: absolute;
-    font-size: 1rem;
-    top: 0.1rem;
-    right: -1.3rem;
-    transition: 0.3s;
+  .navbar .menuContainer .menuNav .styles .arrow {
+    position: relative;
   }
 }
 * {
