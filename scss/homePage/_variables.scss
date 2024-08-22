@@ -6,3 +6,65 @@ $bg-colorHover: #0e0204;
 $primary-gradient: linear-gradient(#F1C37C, #A78045);
 $secondary-gradient: linear-gradient(to right, #F1C37C, #A78045);
 $gradientHover: linear-gradient(to right, #ffc875, #c98929);
+
+//Flexbox
+@mixin flexCenter($justify-content){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
+
+//Flexbox Colum
+@mixin flexColum(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+//Media Query Desktop
+@mixin responsive-desktop {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+//Media Query Tablet
+@mixin responsive-tablet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+//Media Query Mobile
+@mixin responsive-mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+//Hover Navbar Link
+@mixin hover-link() {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    top: 45%;
+    right: 0;
+    background: $primary-colorHover;
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+@mixin animationDropdown($height) {
+  @keyframes animationDrop {
+    0%{height: 0rem;} 100%{height: $height;} 
+}
+  animation: animationDrop 0.6s;
+}

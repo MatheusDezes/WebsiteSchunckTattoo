@@ -1,0 +1,13 @@
+@import  "./variables", "./navbar", "./header";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IM Fell French Canon", serif;
+}
+
+body {
+    background: $bg-color;
+    height: 2000px;
+}
