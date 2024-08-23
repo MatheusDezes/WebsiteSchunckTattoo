@@ -11,10 +11,12 @@ window.addEventListener('scroll', () => {
 const styles = document.querySelector('.styles');
 const iconDrop = document.querySelector('.arrow');
 const navDropdown = document.querySelector('.dropdown');
+const lastMenuItem = document.querySelector('.menuNav > li:last-child');
 
 styles.addEventListener('click', () => {
     navDropdown.classList.toggle('dropOpen');
     iconDrop.classList.toggle('arrowRotate');
+    lastMenuItem.classList.toggle('lastItemOpen');
 });
 
 const buttonMenuOpen = document.querySelector('.btnMenuOpen');
@@ -26,6 +28,8 @@ buttonMenuOpen.addEventListener('click', () => {
 });
 buttonMenuClose.addEventListener('click', () => {
     menuNav.classList.remove('active');
+    navDropdown.classList.remove('dropOpen');
+    lastMenuItem.classList.remove('lastItemOpen');
 });
 
 
