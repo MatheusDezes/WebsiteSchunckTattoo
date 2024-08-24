@@ -3,10 +3,11 @@
   position: fixed;
   padding: 0 6% 0 3%;
   transition: background 0.5s ease, border-bottom 0.5s ease;
+  background: #070102;
+  z-index: 1000;
 }
 .navbarContainer.background {
   border-bottom: 1px solid #E4C9A0;
-  background: #070102;
 }
 
 .navbar {
@@ -139,21 +140,27 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .navbar .dividerNav img, .navbar .dropdown {
+  .navbarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .navbarContainer .navbar .dividerNav img, .navbarContainer .navbar .dropdown {
     display: none;
   }
-  .navbar .btnMenuOpen,
-  .navbar .btnMenuClose {
+  .navbarContainer .navbar .btnMenuOpen,
+  .navbarContainer .navbar .btnMenuClose {
     display: block;
     all: unset;
     cursor: pointer;
     font-size: 1.75rem;
     color: #E4C9A0;
   }
-  .navbar .menuContainer.active {
+  .navbarContainer .navbar .menuContainer.active {
     transform: translateX(0);
   }
-  .navbar .menuContainer {
+  .navbarContainer .navbar .menuContainer {
     top: 0;
     left: 0;
     width: 100%;
@@ -163,7 +170,7 @@
     transform: translateX(-100%);
     transition: 0.5s ease-in-out;
   }
-  .navbar .menuContainer .menuMobile {
+  .navbarContainer .navbar .menuContainer .menuMobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,18 +179,18 @@
     border-bottom: 1px solid #E4C9A0;
     padding: 0 6% 0 3%;
   }
-  .navbar .menuContainer .menuMobile .dividerMobile {
+  .navbarContainer .navbar .menuContainer .menuMobile .dividerMobile {
     display: block;
   }
-  .navbar .menuContainer .menuMobile .dividerMobile img {
+  .navbarContainer .navbar .menuContainer .menuMobile .dividerMobile img {
     width: 20.5rem;
     height: 1.625rem;
   }
-  .navbar .menuContainer .menuNav {
+  .navbarContainer .navbar .menuContainer .menuNav {
     width: 100%;
     height: 100vh;
   }
-  .navbar .menuContainer .menuNav li {
+  .navbarContainer .navbar .menuContainer .menuNav li {
     width: 100%;
     height: 6rem;
     padding: 0 0 0 22%;
@@ -195,42 +202,42 @@
     justify-content: 0;
     align-items: center;
   }
-  .navbar .menuContainer .menuNav li.lastItemOpen {
+  .navbarContainer .navbar .menuContainer .menuNav li.lastItemOpen {
     margin-top: 50%;
   }
-  .navbar .menuContainer .menuNav li a {
+  .navbarContainer .navbar .menuContainer .menuNav li a {
     color: #E4C9A0;
     text-decoration: none;
   }
-  .navbar .menuContainer .menuNav li a i {
+  .navbarContainer .navbar .menuContainer .menuNav li a i {
     display: flex;
     position: absolute;
     font-size: clamp(1.5rem, 4vw, 2rem);
     left: 10%;
   }
-  .navbar .menuContainer .menuNav li:hover {
+  .navbarContainer .navbar .menuContainer .menuNav li:hover {
     color: #070102;
     background: linear-gradient(90deg, #E4C9A0 0%, #B7A994 100%);
   }
-  .navbar .menuContainer .menuNav li:hover a,
-  .navbar .menuContainer .menuNav li:hover i {
+  .navbarContainer .navbar .menuContainer .menuNav li:hover a,
+  .navbarContainer .navbar .menuContainer .menuNav li:hover i {
     color: #070102;
   }
-  .navbar .menuContainer .menuNav .styles {
+  .navbarContainer .navbar .menuContainer .menuNav .styles {
     color: #E4C9A0;
     cursor: pointer;
   }
-  .navbar .menuContainer .menuNav .styles .paint {
+  .navbarContainer .navbar .menuContainer .menuNav .styles .paint {
     display: flex;
     position: absolute;
     left: 10%;
   }
-  .navbar .menuContainer .menuNav .styles .arrow {
+  .navbarContainer .navbar .menuContainer .menuNav .styles .arrow {
     display: block;
     position: relative;
     right: -0.6rem;
   }
-  .navbar .dropdown {
+  .navbarContainer .navbar .dropdown {
     position: absolute;
     top: 520%;
     width: 100%;
@@ -248,10 +255,10 @@
       height: 15.625rem;
     }
   }
-  .navbar .dropdown.dropOpen {
+  .navbarContainer .navbar .dropdown.dropOpen {
     display: block;
   }
-  .navbar .dropdown .menuDropdown a {
+  .navbarContainer .navbar .dropdown .menuDropdown a {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -264,14 +271,14 @@
     color: #E4C9A0;
     transition: 0.3s ease-in-out;
   }
-  .navbar .dropdown .menuDropdown a:hover {
+  .navbarContainer .navbar .dropdown .menuDropdown a:hover {
     background: linear-gradient(90deg, #6C101F 0%, #080103 100%);
     color: 0;
   }
-  .navbar .dropdown .menuDropdown .verTodos {
+  .navbarContainer .navbar .dropdown .menuDropdown .verTodos {
     background: linear-gradient(90deg, #6C101F 0%, #080103 100%);
   }
-  .navbar .dropdown .menuDropdown .verTodos:hover {
+  .navbarContainer .navbar .dropdown .menuDropdown .verTodos:hover {
     background: linear-gradient(90deg, #6C101F 0%, #080103 100%);
     color: 0;
   }
@@ -304,6 +311,72 @@
     color: 0;
   }
 }
+.headerContainer {
+  width: 100%;
+  position: relative;
+}
+.headerContainer .header {
+  max-width: 1440px;
+  height: calc(100vh - 5rem);
+  margin: 0 auto;
+}
+.headerContainer .header .anuncio {
+  position: relative;
+  z-index: 1;
+  color: #E4C9A0;
+}
+.headerContainer .header .shadowBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 6vw 4vw 15vw 100px #070102;
+  pointer-events: none;
+}
+.headerContainer .header .shadowBackground .shapeContainer {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  position: relative;
+}
+.headerContainer .header .shadowBackground .shapeContainer .shapeHeader {
+  width: 8.6875rem;
+  height: 8.375rem;
+}
+.headerContainer .header .shadowBackground .shapeContainer .shapeHeader:nth-child(1) {
+  top: 1%;
+  left: 1%;
+  position: absolute;
+}
+.headerContainer .header .shadowBackground .shapeContainer .shapeHeader:nth-child(2) {
+  top: 1%;
+  right: 1%;
+  position: absolute;
+  transform: rotate(90deg);
+}
+.headerContainer .header .shadowBackground .shapeContainer .shapeHeader:nth-child(3) {
+  bottom: 1%;
+  left: 1%;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+.headerContainer .header .shadowBackground .shapeContainer .shapeHeader:nth-child(4) {
+  bottom: 1%;
+  right: 1%;
+  position: absolute;
+  transform: rotate(180deg);
+}
+.headerContainer .header .shadowBackground .backgroundHeader {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  object-fit: cover;
+  opacity: 40%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -314,6 +387,18 @@
 body {
   background: #070102;
   height: 2000px;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #070102;
+}
+body::-webkit-scrollbar-thumb {
+  background: #E4C9A0;
+}
+body main {
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,4 +10,22 @@
 body {
     background: $bg-color;
     height: 2000px;
+
+    &::-webkit-scrollbar{
+        width: 0.25rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: $bg-color;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $primary-color;
+    }
+
+    main {
+        margin-top: 5rem;
+    }
 }
+
+    

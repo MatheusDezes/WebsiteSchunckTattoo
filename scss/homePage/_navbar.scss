@@ -3,10 +3,11 @@
     position: fixed;
     padding: 0 6% 0 3%;
     transition: background 0.5s ease, border-bottom 0.5s ease;    
+    background: $bg-color;
+    z-index: 1000;
         
     &.background{
         border-bottom: 1px solid $primary-color;
-        background: $bg-color;
     }
 }
     
@@ -14,11 +15,10 @@
     width: 100%;
     height: 5rem;
     @include flexCenter(space-between);
-    
+
     .dividerNav img,.dropdown,.menuNav i,.dividerMobile,.btnMenuClose,.btnMenuOpen{
         display: none;
     }
-
 }
 
 @include responsive-desktop {
@@ -27,7 +27,6 @@
         top: 0;             
         left: 0;    
         width: 100%;    
-
     }
     
     .navbar {
@@ -124,109 +123,116 @@
 }
 
 @include responsive-tablet {
-.navbar {  
-    .dividerNav img,.dropdown {
-        display: none;
-    }
-
-    .btnMenuOpen,
-    .btnMenuClose{
-        display: block;
-        all: unset;
-        cursor: pointer;
-        font-size: 1.75rem;
-        color: $primary-color;
-    }
-    
-    .menuContainer.active{
-        transform: translateX(0);
-    }
-
-    .menuContainer{
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        background: $bg-color;
-        transform: translateX(-100%);
-        transition: 0.5s ease-in-out;
+    .navbarContainer {
+        position: fixed;    
+        top: 0;             
+        left: 0;    
+        width: 100%;    
         
-        .menuMobile{
-            @include flexCenter(space-between);
-            width: 100%;
-            height: 5rem;
-            border-bottom: 1px solid $primary-color;
-            padding: 0 6% 0 3%;
-            
-        .dividerMobile {
-            display: block;
-                img{
-                    width: 20.5rem;
-                    height: 1.625rem;
-                }
-            }
-    }
-    .menuNav{
-        width: 100%;
-        height: 100vh;
-
-        
-        li {
-            width: 100%;
-            height: 6rem;
-            padding: 0 0 0 22%;
-            margin-top: 1rem;
-            font-size: clamp(1.5rem, 4vw, 1.7rem);
-            text-transform: uppercase;
-            transition: 0.3s ease-in-out;
-            @include flexCenter(0);
-            
-            &.lastItemOpen{
-                margin-top: 50%;    
-            }
-
-            a{
-                i {
-                    display: flex;
-                    position: absolute;
-                    font-size: clamp(1.5rem, 4vw, 2rem);
-                    left: 10%;
-                }   
-                    color: $primary-color;
-                    text-decoration: none;
+            .navbar {  
+                .dividerNav img,.dropdown {
+                    display: none;
                 }
                 
-            }
-
-            li:hover {
-                color: $bg-color;
-                background: $gradientDropdown;
-            }
-
-            li:hover a, 
-            li:hover i {
-                color: $bg-color;
-            }
-
-            .styles {
-                color: $primary-color;
-                cursor: pointer;
-
-                .paint {
-                    display: flex;
-                    position: absolute;
-                    left: 10%;
-                }
-                .arrow {
+                .btnMenuOpen,
+                .btnMenuClose{
                     display: block;
-                    position: relative;
-                    right: -.6rem;
+                    all: unset;
+                    cursor: pointer;
+                    font-size: 1.75rem;
+                    color: $primary-color;
+                }
+                
+                .menuContainer.active{
+                    transform: translateX(0);
+        }
+
+        .menuContainer{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            background: $bg-color;
+            transform: translateX(-100%);
+            transition: 0.5s ease-in-out;
+            
+            .menuMobile{
+                @include flexCenter(space-between);
+                width: 100%;
+                height: 5rem;
+                border-bottom: 1px solid $primary-color;
+                padding: 0 6% 0 3%;
+                
+                .dividerMobile {
+                    display: block;
+                        img{
+                            width: 20.5rem;
+                            height: 1.625rem;
+                        }
+                    }
+                }
+                
+                .menuNav{
+                    width: 100%;
+                    height: 100vh;
+                    
+                    
+                    li {
+                        width: 100%;
+                        height: 6rem;
+                        padding: 0 0 0 22%;
+                        margin-top: 1rem;
+                        font-size: clamp(1.5rem, 4vw, 1.7rem);
+                        text-transform: uppercase;
+                        transition: 0.3s ease-in-out;
+                        @include flexCenter(0);
+                        
+                        &.lastItemOpen{
+                            margin-top: 50%;    
+                        }
+                        
+                        a{
+                            i {
+                                display: flex;
+                                position: absolute;
+                                font-size: clamp(1.5rem, 4vw, 2rem);
+                                left: 10%;
+                    }   
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                    
+                }
+                
+                li:hover {
+                    color: $bg-color;
+                    background: $gradientDropdown;
+                }
+                
+                li:hover a, 
+                li:hover i {
+                    color: $bg-color;
+                }
+                
+                .styles {
+                    color: $primary-color;
+                    cursor: pointer;
+                    
+                    .paint {
+                        display: flex;
+                        position: absolute;
+                        left: 10%;
+                    }
+                    .arrow {
+                        display: block;
+                        position: relative;
+                        right: -.6rem;
                     }
                 }
             }
         }
-
+        
         .dropdown {
             position: absolute;
             top: 520%; 
@@ -255,12 +261,12 @@
                     @include hover(0,$third-gradient); 
                 }
 
-                .verTodos {
-                    background: $third-gradient;
-                    @include hover(0,$third-gradient); 
-                }
-
-            } 
+                    .verTodos {
+                        background: $third-gradient;
+                        @include hover(0,$third-gradient); 
+                    }
+                } 
+            }
         }
     }
 }
