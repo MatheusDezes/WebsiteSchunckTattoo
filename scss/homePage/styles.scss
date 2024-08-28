@@ -1,4 +1,4 @@
-@import  "./variables", "./navbar", "./header", "./about";
+@import  "./variables", "./navbar", "./header", "./about", "./tattoostyles";
 
 * {
     margin: 0;
@@ -10,6 +10,7 @@
 body {
     background: $bg-color;
     height: 2000px;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar{
         width: 0.25rem;

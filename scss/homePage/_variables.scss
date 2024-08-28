@@ -9,6 +9,7 @@ $secondary-gradient: linear-gradient(to left, #F1C37C, #A78045);
 $third-gradient: linear-gradient(90deg, #6C101F 0%, #080103 100%);
 $fourth-gradient: linear-gradient(to left, #FFF 0%, #B2B2B2 100%);
 $fifth-gradient: radial-gradient( #070102 40%, #6D101F 100%);
+$sixth-gradient: linear-gradient(to left, #0B0A12 0%, #070102 100%);
 $gradientHover: linear-gradient(to right, #ffc875, #c98929);
 
 //Flexbox
@@ -48,6 +49,12 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
 //Media Query variable
 @mixin responsive-variable {
   @media screen and (max-width: 1540px) {
+    @content;
+  }
+}
+
+@mixin responsive-tabletAbout {
+  @media screen and (max-width: 1290px) {
     @content;
   }
 }
