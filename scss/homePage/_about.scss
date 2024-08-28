@@ -1,0 +1,18 @@
+.dividerOne,.dividerTwo {
+    width: 100%;
+    height: clamp(4.25rem, 15vw, 9.1875rem);
+    margin: 0 auto;
+    padding: 0 5%;
+    @include flexCenter(center);
+    
+        img{
+            max-width: 47.5625rem;
+            width: 100%;
+            height: auto;
+        }
+}
+
+.aboutContainer {
+    width: 100%;
+    
+}

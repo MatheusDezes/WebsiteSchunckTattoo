@@ -31,6 +31,3 @@ buttonMenuClose.addEventListener('click', () => {
     navDropdown.classList.remove('dropOpen');
     lastMenuItem.classList.remove('lastItemOpen');
 });
-
-
-

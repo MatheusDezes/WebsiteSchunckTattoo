@@ -1,7 +1,7 @@
 .navbarContainer {
     width: 100%;        
     position: fixed;
-    transition: background 0.5s ease, border-bottom 0.5s ease;    
+    transition: border-bottom 0.5s ease;    
     background: $bg-color;
     z-index: 1000;
     
@@ -132,6 +132,8 @@
         width: 100%;    
         
             .navbar {  
+                padding: 0 8% 0 4%;
+
                 .dividerNav img,.dropdown {
                     display: none;
                 }
