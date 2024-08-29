@@ -49,6 +49,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
+
             .textBio{   
                 margin-top: 3%;
                 font-family: "IM FELL French Canon";
@@ -74,7 +75,9 @@
                     border: 1px solid $primary-color;
                     background: $fifth-gradient;
                     text-decoration: none;
+                    transition: 0.3s;
                     @include flexCenter(center);
+                    @include hover(0, $fifth-gradientHover);
                     
                     i{
                         font-size: 1.6rem;

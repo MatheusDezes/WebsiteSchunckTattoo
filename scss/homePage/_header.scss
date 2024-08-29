@@ -40,16 +40,14 @@
                 -webkit-text-fill-color: transparent;
             }
             .btnSimular {
+                font-family: "IM FELL French Canon SC";
                 padding: 10px 25px;
                 background: $fifth-gradient;
+                font-size: clamp(1.25rem, 3vw, 1.5rem);
                 border: 1px solid $primary-color;
-                
-                a {
-                    font-family: "IM FELL French Canon SC";
-                    font-size: clamp(1.25rem, 3vw, 1.5rem);
-                    color: $primary-color;
-                    text-decoration: none;
-                }
+                color: $primary-color;
+                text-decoration: none;
+                @include hover(0,$fifth-gradientHover);
             }
         }
     .shadowBackground{

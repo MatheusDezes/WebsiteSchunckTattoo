@@ -361,15 +361,17 @@
   -webkit-text-fill-color: transparent;
 }
 .headerContainer .header .anuncio .btnSimular {
+  font-family: "IM FELL French Canon SC";
   padding: 10px 25px;
   background: radial-gradient(#070102 40%, #6D101F 100%);
-  border: 1px solid #E4C9A0;
-}
-.headerContainer .header .anuncio .btnSimular a {
-  font-family: "IM FELL French Canon SC";
   font-size: clamp(1.25rem, 3vw, 1.5rem);
+  border: 1px solid #E4C9A0;
   color: #E4C9A0;
   text-decoration: none;
+}
+.headerContainer .header .anuncio .btnSimular:hover {
+  background: radial-gradient(#070102 40%, #F1C37C 100%);
+  color: 0;
 }
 .headerContainer .header .shadowBackground {
   position: absolute;
@@ -516,9 +518,14 @@
   border: 1px solid #E4C9A0;
   background: radial-gradient(#070102 40%, #6D101F 100%);
   text-decoration: none;
+  transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.aboutContainer .about .aboutBio .socialMidias .instagramBox:hover, .aboutContainer .about .aboutBio .socialMidias .whatsappBox:hover {
+  background: radial-gradient(#070102 40%, #F1C37C 100%);
+  color: 0;
 }
 .aboutContainer .about .aboutBio .socialMidias .instagramBox i, .aboutContainer .about .aboutBio .socialMidias .whatsappBox i {
   font-size: 1.6rem;
@@ -600,6 +607,7 @@
 .tattostyles {
   max-width: 1480px;
   width: 100%;
+  height: 50rem;
   position: relative;
   margin: 0 auto;
 }
@@ -695,6 +703,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .tattostyles {
+    height: 40rem;
+  }
   .tattostyles .containerCardStyles .boxCardStyle .cardText {
     position: absolute;
     top: 50%;
@@ -707,6 +718,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .tattostyles {
+    height: 44rem;
+  }
   .tattostyles .yourStyle .titleStyle {
     max-width: 16rem;
   }
@@ -721,6 +735,38 @@
     font-size: 3rem;
   }
 }
+.communication {
+  max-width: 1480px;
+  width: 100%;
+  height: 28.75rem;
+  margin: 0 auto;
+  border-top: 1px solid #E4C9A0;
+  border-bottom: 1px solid #E4C9A0;
+  position: relative;
+}
+.communication .videoBackground {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 80%;
+}
+.communication .boxTextCommuni {
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #070102;
+  border-radius: 3.125rem 0rem 0rem 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.communication .boxTextCommuni .titleCommuni {
+  color: #E4C9A0;
+}
+
 * {
   margin: 0;
   padding: 0;
