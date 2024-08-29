@@ -53,6 +53,7 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
   }
 }
 
+//Media Query somente para o About
 @mixin responsive-tabletAbout {
   @media screen and (max-width: 1290px) {
     @content;

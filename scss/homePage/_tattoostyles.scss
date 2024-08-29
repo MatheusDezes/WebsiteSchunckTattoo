@@ -1,7 +1,7 @@
-
 .tattostyles {
     max-width: 1480px;
     width: 100%;
+    position: relative;
     margin: 0 auto;
     
     .yourStyle {
@@ -27,11 +27,117 @@
         }
     }
     .containerCardStyles {
+        max-width: 70rem;
         width: 100%;
         display: grid;
-        max-width: 65rem;
-        margin: 0 auto;
         grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        padding: 0 5%;
+
+        .boxCardStyle {
+            width: 100%;
+            max-height: 18.42494rem;
+            padding: 0 5%;
+            position: relative;
+            transition: 0.3s;
+            
+            .frameCard img{
+                width: 100%;
+                height: auto;
+            }
+
+            .cardText {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                .iconCard {
+                    font-size: 5rem;
+                    color: $primary-color;
+                }
+                .textCard {
+                    position: relative;
+                    bottom: -15px;
+                    font-family: "IM FELL French Canon SC";
+                    font-size: clamp(.8rem, 2vw, 1.415rem);
+                    color: $primary-color;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+        .boxCardStyle:hover {
+            scale: 1.1;
+        }
         
+        @include responsive-desktop {
+            .boxCardStyle:nth-child(2),
+            .boxCardStyle:nth-child(3){
+                position: relative;
+                top: -25px;
+            }
+        }
     }
+
+    .btnStyles {
+        font-family: "IM FELL French Canon SC";
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        text-decoration: none;
+        margin-top: 4%;
+        padding: 0.9% 3.3%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        color: $bg-color;
+        border: 2px solid $primary-color;
+        background: $secondary-gradient;
+        transition: 0.3s;
+        @include hover($bg-colorHover, $gradientHover);
+    }
+}
+
+@include responsive-tablet {
+    .tattostyles {
+        .containerCardStyles {
+            .boxCardStyle {
+                .cardText {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+    
+                    .iconCard {
+                        font-size: 4rem;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive-mobile {
+    .tattostyles {
+        .yourStyle {
+            .titleStyle{
+                max-width: 16rem;
+            }
+        }
+        .containerCardStyles {
+            max-width: 22rem;
+            grid-template-columns: repeat(2, 1fr);
+    
+            .boxCardStyle {
+                padding: 8%;
+                
+                .cardText {
+                    .iconCard {
+                        font-size: 3rem;
+                    }
+
+                }
+            }
+        }
+    }    
 }

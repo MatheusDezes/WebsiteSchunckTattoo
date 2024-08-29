@@ -600,6 +600,7 @@
 .tattostyles {
   max-width: 1480px;
   width: 100%;
+  position: relative;
   margin: 0 auto;
 }
 .tattostyles .yourStyle {
@@ -627,13 +628,99 @@
   color: #E4C9A0;
 }
 .tattostyles .containerCardStyles {
+  max-width: 70rem;
   width: 100%;
   display: grid;
-  max-width: 65rem;
-  margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.tattostyles .containerCardStyles .boxCardStyle {
+  width: 100%;
+  max-height: 18.42494rem;
+  padding: 0 5%;
+  position: relative;
+  transition: 0.3s;
+}
+.tattostyles .containerCardStyles .boxCardStyle .frameCard img {
+  width: 100%;
+  height: auto;
+}
+.tattostyles .containerCardStyles .boxCardStyle .cardText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tattostyles .containerCardStyles .boxCardStyle .cardText .iconCard {
+  font-size: 5rem;
+  color: #E4C9A0;
+}
+.tattostyles .containerCardStyles .boxCardStyle .cardText .textCard {
+  position: relative;
+  bottom: -15px;
+  font-family: "IM FELL French Canon SC";
+  font-size: clamp(0.8rem, 2vw, 1.415rem);
+  color: #E4C9A0;
+  font-weight: 400;
+  text-align: center;
+}
+.tattostyles .containerCardStyles .boxCardStyle:hover {
+  scale: 1.1;
+}
+@media screen and (min-width: 992px) {
+  .tattostyles .containerCardStyles .boxCardStyle:nth-child(2),
+  .tattostyles .containerCardStyles .boxCardStyle:nth-child(3) {
+    position: relative;
+    top: -25px;
+  }
+}
+.tattostyles .btnStyles {
+  font-family: "IM FELL French Canon SC";
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  text-decoration: none;
+  margin-top: 4%;
+  padding: 0.9% 3.3%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  color: #070102;
+  border: 2px solid #E4C9A0;
+  background: linear-gradient(to left, #F1C37C, #A78045);
+  transition: 0.3s;
+}
+.tattostyles .btnStyles:hover {
+  background: linear-gradient(to right, #ffc875, #c98929);
+  color: #0e0204;
 }
 
+@media screen and (max-width: 992px) {
+  .tattostyles .containerCardStyles .boxCardStyle .cardText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .tattostyles .containerCardStyles .boxCardStyle .cardText .iconCard {
+    font-size: 4rem;
+    color: #E4C9A0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tattostyles .yourStyle .titleStyle {
+    max-width: 16rem;
+  }
+  .tattostyles .containerCardStyles {
+    max-width: 22rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tattostyles .containerCardStyles .boxCardStyle {
+    padding: 8%;
+  }
+  .tattostyles .containerCardStyles .boxCardStyle .cardText .iconCard {
+    font-size: 3rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
