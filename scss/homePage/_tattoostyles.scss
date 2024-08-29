@@ -1,0 +1,37 @@
+
+.tattostyles {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    
+    .yourStyle {
+        width: 100%;
+        height: auto;
+        padding: 6%;
+        @include flexColum(center);
+        
+        .titleStyle{
+            font-size: clamp(3.3125rem, 4vw, 5.3125rem );
+            font-family: "IM FELL French Canon SC";
+            font-weight: 400;
+            background: $secondary-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+        .subTitleStyle {
+            font-size: clamp(1rem, 2vw, 2rem);
+            font-family: "IM FELL French Canon SC";
+            font-weight: 400;
+            color: $primary-color; 
+        }
+    }
+    .containerCardStyles {
+        width: 100%;
+        display: grid;
+        max-width: 65rem;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+}

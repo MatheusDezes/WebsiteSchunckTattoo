@@ -597,6 +597,43 @@
     font-size: 1.3rem;
   }
 }
+.tattostyles {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+}
+.tattostyles .yourStyle {
+  width: 100%;
+  height: auto;
+  padding: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tattostyles .yourStyle .titleStyle {
+  font-size: clamp(3.3125rem, 4vw, 5.3125rem);
+  font-family: "IM FELL French Canon SC";
+  font-weight: 400;
+  background: linear-gradient(to left, #F1C37C, #A78045);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tattostyles .yourStyle .subTitleStyle {
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-family: "IM FELL French Canon SC";
+  font-weight: 400;
+  color: #E4C9A0;
+}
+.tattostyles .containerCardStyles {
+  width: 100%;
+  display: grid;
+  max-width: 65rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -606,7 +643,6 @@
 
 body {
   background: #070102;
-  height: 2000px;
   scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
