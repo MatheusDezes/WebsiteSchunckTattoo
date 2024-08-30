@@ -77,13 +77,22 @@
                     text-decoration: none;
                     transition: 0.3s;
                     @include flexCenter(center);
-                    @include hover(0, $fifth-gradientHover);
                     
                     i{
                         font-size: 1.6rem;
                         color: $primary-color;
                     }
                 }
+                .instagramBox:hover,
+                .whatsappBox:hover {
+                    background: $fifth-gradientHover;
+                    scale: 1.1;
+                }
+                .instagramBox:hover i,
+                .whatsappBox:hover i{
+                    color: $primary-colorHover;
+                }
+  
             }
         }
     }

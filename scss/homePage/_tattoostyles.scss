@@ -94,7 +94,11 @@
         border: 2px solid $primary-color;
         background: $secondary-gradient;
         transition: 0.3s;
-        @include hover($bg-colorHover, $gradientHover);
+        
+        &:hover {
+            scale: 1.03;
+            background: $primary-gradient;
+        }
     }
 }
 

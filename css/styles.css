@@ -368,10 +368,11 @@
   border: 1px solid #E4C9A0;
   color: #E4C9A0;
   text-decoration: none;
+  transition: 0.3s;
 }
 .headerContainer .header .anuncio .btnSimular:hover {
-  background: radial-gradient(#070102 40%, #F1C37C 100%);
-  color: 0;
+  scale: 1.1;
+  color: #c09452;
 }
 .headerContainer .header .shadowBackground {
   position: absolute;
@@ -523,13 +524,18 @@
   justify-content: center;
   align-items: center;
 }
-.aboutContainer .about .aboutBio .socialMidias .instagramBox:hover, .aboutContainer .about .aboutBio .socialMidias .whatsappBox:hover {
-  background: radial-gradient(#070102 40%, #F1C37C 100%);
-  color: 0;
-}
 .aboutContainer .about .aboutBio .socialMidias .instagramBox i, .aboutContainer .about .aboutBio .socialMidias .whatsappBox i {
   font-size: 1.6rem;
   color: #E4C9A0;
+}
+.aboutContainer .about .aboutBio .socialMidias .instagramBox:hover,
+.aboutContainer .about .aboutBio .socialMidias .whatsappBox:hover {
+  background: radial-gradient(#070102 40%, #F1C37C 100%);
+  scale: 1.1;
+}
+.aboutContainer .about .aboutBio .socialMidias .instagramBox:hover i,
+.aboutContainer .about .aboutBio .socialMidias .whatsappBox:hover i {
+  color: #c09452;
 }
 
 @media screen and (max-width: 1290px) {
@@ -698,8 +704,8 @@
   transition: 0.3s;
 }
 .tattostyles .btnStyles:hover {
-  background: linear-gradient(to right, #ffc875, #c98929);
-  color: #0e0204;
+  scale: 1.03;
+  background: linear-gradient(#F1C37C, #A78045);
 }
 
 @media screen and (max-width: 992px) {

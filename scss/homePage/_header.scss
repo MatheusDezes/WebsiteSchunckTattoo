@@ -47,7 +47,12 @@
                 border: 1px solid $primary-color;
                 color: $primary-color;
                 text-decoration: none;
-                @include hover(0,$fifth-gradientHover);
+                transition: 0.3s;
+                
+                &:hover {
+                    scale: 1.1;
+                    color: $primary-colorHover;
+                }
             }
         }
     .shadowBackground{
