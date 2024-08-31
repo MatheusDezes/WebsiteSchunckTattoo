@@ -34,6 +34,13 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
       @content;
     }
   }
+
+//Media Query desktop2
+@mixin responsive-desktop2 {
+  @media screen and (min-width: 767px) {
+    @content;
+  }
+}
 //Media Query Tablet
 @mixin responsive-tablet {
   @media screen and (max-width: 992px) {
@@ -48,6 +55,7 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
   }
 }
 
+
 //Media Query variable
 @mixin responsive-variable {
   @media screen and (max-width: 1540px) {
@@ -55,7 +63,7 @@ $gradientHover: linear-gradient(to right, #ffc875, #c98929);
   }
 }
 
-//Media Query somente para o About
+//Media Query somente para o "About"
 @mixin responsive-tabletAbout {
   @media screen and (max-width: 1290px) {
     @content;

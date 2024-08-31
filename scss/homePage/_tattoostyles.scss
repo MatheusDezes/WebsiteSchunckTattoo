@@ -1,7 +1,7 @@
 .tattostyles {
     max-width: 1480px;
     width: 100%;
-    height: 50rem;
+    height: 55rem;
     position: relative;
     margin: 0 auto;
     
@@ -104,7 +104,7 @@
 
 @include responsive-tablet {
     .tattostyles {
-        height: 40rem;
+        height: 38rem;
         .containerCardStyles {
             .boxCardStyle {
                 .cardText {
@@ -125,7 +125,7 @@
 
 @include responsive-mobile {
     .tattostyles {
-        height: 44rem;
+        height: 46rem;
         .yourStyle {
             .titleStyle{
                 max-width: 16rem;

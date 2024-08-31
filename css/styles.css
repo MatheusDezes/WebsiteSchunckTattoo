@@ -613,7 +613,7 @@
 .tattostyles {
   max-width: 1480px;
   width: 100%;
-  height: 50rem;
+  height: 55rem;
   position: relative;
   margin: 0 auto;
 }
@@ -710,7 +710,7 @@
 
 @media screen and (max-width: 992px) {
   .tattostyles {
-    height: 40rem;
+    height: 38rem;
   }
   .tattostyles .containerCardStyles .boxCardStyle .cardText {
     position: absolute;
@@ -725,7 +725,7 @@
 }
 @media screen and (max-width: 767px) {
   .tattostyles {
-    height: 44rem;
+    height: 46rem;
   }
   .tattostyles .yourStyle .titleStyle {
     max-width: 16rem;
@@ -756,11 +756,16 @@
   object-fit: cover;
   opacity: 80%;
 }
+@media screen and (min-width: 767px) {
+  .communication .boxTextCommuni {
+    top: 0;
+    right: 0;
+  }
+}
 .communication .boxTextCommuni {
-  top: 0;
-  right: 0;
   width: 50%;
   height: 100%;
+  padding: 8%;
   position: absolute;
   background: #070102;
   border-radius: 3.125rem 0rem 0rem 3.125rem;
@@ -771,6 +776,96 @@
 }
 .communication .boxTextCommuni .titleCommuni {
   color: #E4C9A0;
+  font-size: clamp(1.8rem, 4vw, 4rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  background: linear-gradient(to left, #F1C37C, #A78045);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.communication .boxTextCommuni .subTitleCommuni {
+  color: #E4C9A0;
+  font-family: "IM FELL French Canon SC";
+  font-size: clamp(1rem, 2vw, 1.625rem);
+  font-weight: 400;
+}
+.communication .boxTextCommuni .btnCommuni {
+  font-family: "IM FELL French Canon SC";
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  text-decoration: none;
+  margin-top: 6%;
+  padding: 1.8% 3.8%;
+  color: #070102;
+  border: 2px solid #E4C9A0;
+  background: linear-gradient(to left, #F1C37C, #A78045);
+  border-radius: 5rem;
+  transition: 0.3s;
+}
+.communication .boxTextCommuni .btnCommuni:hover {
+  scale: 1.1;
+  background: linear-gradient(#F1C37C, #A78045);
+}
+
+@media screen and (max-width: 767px) {
+  .communication {
+    height: 28.75rem;
+  }
+  .communication .videoBackground {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+  }
+  .communication .boxTextCommuni {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 15%;
+    border-radius: 0 0rem 2.125rem 2.125rem;
+  }
+  .communication .boxTextCommuni .titleCommuni {
+    max-width: 14rem;
+  }
+}
+.feedbacks {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 767px) {
+  .feedbacks {
+    padding: 0 25%;
+  }
+}
+.feedbacks .boxTitleFeed {
+  width: 100%;
+  height: 12.6875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.feedbacks .boxTitleFeed .titleFeed {
+  font-family: "IM FELL French Canon SC";
+  font-size: clamp(3.25rem, 4vw, 6rem);
+  font-weight: 400;
+  background: linear-gradient(to left, #F1C37C, #A78045);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.feedbacks .boxTitleFeed .dividerFeed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedbacks .boxTitleFeed .dividerFeed img {
+  max-width: 39.5625rem;
+  width: 100%;
+  height: auto;
 }
 
 * {
